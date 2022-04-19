@@ -1,0 +1,63 @@
+<div>
+    <div>
+        <h2 id="parrafo1">Seleccione el tipo de equipamiento:</h2>
+
+        <div id="equipamiento">
+            <select class="select" data-dojo-attach-point="select" data-dojo-attach-event="onchange: cargaSeleccion" style="display: block;">
+                <option value="-1">Seleccione Equipamiento</option>
+                <option value="0" text="Parada de metro">Estaciones de metro</option>
+                <option value="1" text="Centro de eduación especial">Centro de eduación especial</option>
+                <option value="2" text="Centro de educaión adultos">Centro de educaión adultos</option>
+                <option value="3" text="Escuelas infantiles">Escuelas infantiles</option>
+                <option value="4" text="Colegios privados/concertados">Colegios privados/concertados</option>
+                <option value="5" text="Colegios públicos">Colegios públicos</option>
+                <option value="6" text="Institutos públicos">Institutos públicos</option>
+                <option value="7" text="Farmacias">Farmacias</option>
+                <option value="8" text="Piscinas">Piscinas</option>
+                <option value="9" text="Campos de fútbol">Campos de fútbol</option>
+                <option value="10" text="Polideportivos">Polideportivos</option>
+                <option value="11" text="Pistas deportivas">Pistas deportivas</option>
+                <option value="12" text="Zonas verdes">Zonas verdes</option>
+            </select>
+        </div>
+
+        <hr data-dojo-attach-point="raya1" style="display: none;">
+
+        <div>
+            <select id="selectFarmacias" data-dojo-attach-point="listaFarmacias" data-dojo-attach-event="onchange: cargaFarmacias" style="display: none;">
+                <option value="-1">Seleccione barrio</option>
+                <option value="Centro" text="Centro">Centro</option>
+                <option value="Este" text="Este">Este</option>
+                <option value="Oeste" text="Oeste">Oeste</option>
+            </select>
+        </div>
+
+        <div>
+            <select id="selectParques" data-dojo-attach-point="listaParques" data-dojo-attach-event="onchange: cargaParques" style="display: none;">
+                <option value="-1">Seleccione el tamaño de la zona verde</option>
+                <option value="Pequeño" text="Pequeño">Pequeño (menor que 10000 m²)</option>
+                <option value="Mediano" text="Mediano">Mediano (10000 - 20000 m²)</option>
+                <option value="Grande" text="Grande">Grande (mayor que 20000 m²)</option>
+            </select>
+        </div>
+
+        <div>
+            <p id="listaEquipamientos" data-dojo-attach-point="listado" style="display: none;"></p>
+        </div>
+
+        <hr data-dojo-attach-point="raya2" style="display: none;">
+
+        <div id="listadoCapas">
+            <select id="select2" data-dojo-attach-point="lista" data-dojo-attach-event="onchange: destruirRuta" style="display: none;"></select>
+            <button class="boton" data-dojo-attach-event="onclick: ruta" data-dojo-attach-point="button" style="display: none;">Obtener ruta hasta el equipamiento</button>
+        </div>
+
+        <hr data-dojo-attach-point="raya3" style="display: none;">
+        
+        <div data-dojo-attach-point="direcciones" style="display: none;">
+            <p class="parrafoDireccion" data-dojo-attach-point="parrafo" style="display: none;">Indique la dirección desde la que desee comenzar la ruta. La dirección al equipamiento seleccionado se completará automáticamente.</p>
+            <div id="divDirections" style="display: none;"></div>
+        </div>
+
+    </div>
+</div>
